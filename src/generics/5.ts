@@ -4,8 +4,8 @@ export enum UserRole {
   guest = 'guest',
 }
 
-const RoleDescription: Record<UserRole, string> = {
-  admin: 'Admin User',
-  editor: 'Editor User',
-  guest: 'Guest User',
+const RoleDescription: { [key in UserRole]: string } = {
+  [UserRole.admin]: 'Admin User',
+  [UserRole.editor]: 'Editor User',
+  [UserRole.guest]: 'Guest User',
 };
